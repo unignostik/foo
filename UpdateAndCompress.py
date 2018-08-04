@@ -64,3 +64,6 @@ try:
 
 #compress generated directories, files
 except IOError:
+    for folder in os.listdir("/Users/ct/Desktop/CPU"):
+    for monthFolder in os.listdir(folder+"/2018"):
+        zipfile.ZipFile(monthFolder+".zip", 'w').write(monthFolder)
